@@ -10,12 +10,25 @@ Effortlessly create and manage to-do items: Effortlessly add new tasks to your l
 Maintain organization: Prioritize tasks and keep your schedule organized, ensuring you focus on what matters most.
 Enjoy a seamless GUI experience: Leverage the intuitive graphical user interface (GUI) for a smooth and efficient workflow.
 Mark tasks as completed: Gain a sense of accomplishment and track your progress by marking completed tasks (consider including this functionality if it's part of your application).
+
+Screenshots : 
+![Screenshot 2024-06-03 113417](https://github.com/210041258/javafx_to_do_list/assets/142579249/77189af0-4b45-4da8-9f2f-8899c0caaab3)
+![Screenshot 2024-06-03 113407](https://github.com/210041258/javafx_to_do_list/assets/142579249/f0cbdcad-eedd-4430-a7d5-7c5fa50a21a4)
+![Screenshot 2024-06-03 113359](https://github.com/210041258/javafx_to_do_list/assets/142579249/be9e20c7-e694-4c92-a952-3d66e552a28c)
+![Screenshot 2024-06-03 113349](https://github.com/210041258/javafx_to_do_list/assets/142579249/2d04e379-461f-4ba0-8594-c5d169f436e8)
+![Screenshot 2024-06-03 113340](https://github.com/210041258/javafx_to_do_list/assets/142579249/5e0defc5-d762-449d-992a-5ddfff1e1afc)
+
+
 Key Features:
 
-Task creation with descriptions
-Task editing 
-Task completion tracking
-User-friendly GUI for an enhanced experience
+Adding a new task to the to-do list.
+Sorting the tasks in the to-do list by due date.
+Marking a task as complete.
+Deleting a task from the to-do list.
+Editing an existing task.
+Searching for a task by its ID.
+Loading data from a database and saving data to a database.
+
 Getting Started:
 
 Clone the Repository: Use git clone https://github.com/210041258/javafx_to_do_list.git to clone this repository onto your local machine.
