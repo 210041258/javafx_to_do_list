@@ -1,3 +1,5 @@
+![image](https://github.com/210041258/javafx_to_do_list/assets/142579249/cdd5ed7d-d6af-4836-a801-32bb7de8415c)
+
 Project Name: JavaFX To-Do List
 
 Description:
