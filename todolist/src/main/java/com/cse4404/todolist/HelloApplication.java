@@ -15,6 +15,7 @@ public class HelloApplication extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         primaryStage.setTitle("Todo list");
+        scene.getStylesheets().add(getClass().getResource("styles.css").toExternalForm());
         Image toDoIcon = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/a.png")));
         primaryStage.getIcons().add(toDoIcon);
         primaryStage.setScene(scene);

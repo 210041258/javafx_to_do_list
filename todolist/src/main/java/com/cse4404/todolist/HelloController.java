@@ -1,17 +1,21 @@
 package com.cse4404.todolist;
 
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.event.ActionEvent;
-import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
 import java.sql.SQLException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
 import java.util.Objects;
 
 public class HelloController {
@@ -27,6 +31,7 @@ public class HelloController {
     private DialogPane error_dialog;
 
     String PATH     = "C:\\Users\\ahmed\\IdeaProjects\\todolist\\src\\main\\java\\com\\cse4404\\todolist\\task.txt";
+    String PATH1     = "C:\\Users\\ahmed\\IdeaProjects\\todolist\\src\\main\\java\\com\\cse4404\\todolist\\tempFile.txt";
     String _PATH     = "C:\\Users\\ahmed\\IdeaProjects\\todolist\\src\\main\\java\\com\\cse4404\\todolist\\tempFile2.txt";
 
     @FXML
@@ -34,6 +39,7 @@ public class HelloController {
 
     int x=0;
     int y=0;
+    private static final DateTimeFormatter DATE_FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 
 
     @FXML
@@ -51,10 +57,36 @@ public class HelloController {
                 if(parts[2].equals("true")){
                     y++;
                 }
+                checkAndNotifyDeadline(parts[0],line);
             }
         }
     }
+    private void checkAndNotifyDeadline(String dateString,String dateString1) {
+        try {
+            LocalDate taskDate = LocalDate.parse(dateString, DATE_FORMATTER);
+            LocalDate today = LocalDate.now();
+             if (taskDate.isEqual(today)) {
+                Platform.runLater(() -> {
+                    try {
+                        showNotification("Task due today!", "A task is due today.",dateString1);
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
+                });
+            }
+        } catch (DateTimeParseException e) {
+            System.err.println("Invalid date format: " + dateString1);
+        }
+    }
 
+    private void showNotification(String title, String message, String textToAppend) throws IOException{
+                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                    alert.setTitle(title);
+                    alert.setHeaderText(null);
+                    alert.setContentText(message);
+                    alert.showAndWait();
+                    Files.write(Paths.get(PATH1), textToAppend.getBytes(), StandardOpenOption.APPEND);
+    }
 
     @FXML
     public void quotes_DIALAG(ActionEvent event) throws IOException {

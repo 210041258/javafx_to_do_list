@@ -201,7 +201,7 @@
          </content>
       </DialogPane>
       <Button layoutX="397.0" layoutY="65.0" mnemonicParsing="false" onAction="#quotes_DIALAG" styleClass="light-button" text="Quotes" />
-      <Button layoutX="273.0" layoutY="65.0" mnemonicParsing="false" onAction="#TOMOROW_TASKS_VIEW" prefHeight="25.0" prefWidth="107.0" styleClass="light-button" text="Tomorrow Tasks" />
+      <Button layoutX="273.0" layoutY="65.0" mnemonicParsing="false" onAction="#TOMOROW_TASKS_VIEW" prefHeight="25.0" prefWidth="117.0" styleClass="light-button" text="Tomorrow Tasks" />
       <Button layoutX="383.0" layoutY="429.0" mnemonicParsing="false" onAction="#backup" onMouseClicked="#backup" prefHeight="25.0" prefWidth="84.0" styleClass="light-button" text="Back Up" />
    </children>
 </Pane>
