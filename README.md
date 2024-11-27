@@ -4,6 +4,7 @@ Project Name: JavaFX To-Do List
 
 Description:
 
+
 This project provides a user-friendly application built with JavaFX to streamline your daily task management. It empowers you to:
 
 Effortlessly create and manage to-do items: Effortlessly add new tasks to your list, providing clear descriptions for each one.
